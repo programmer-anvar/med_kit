@@ -12,10 +12,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 		<>
 			<div className="  ">
 				<div className="flex h-full ">
-					<Sitebar />
-					<div className="w-full">
+					<div className="">
+						<Sitebar />
+					</div>
+					<div className="w-full z-50">
 						<Header />
-						<div className="w-full bg-[#FAFBFA] overflow-hidden  px-8 py-[25px] h-full">
+						<div className=" bg-[#FAFBFA] overflow-hidden  px-8 h-full mt-20">
 							{children}
 						</div>
 					</div>

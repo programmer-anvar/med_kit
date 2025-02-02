@@ -2,7 +2,6 @@ import React from 'react';
 import { MdOutlineCalendarToday } from 'react-icons/md';
 import { PiNotePencil } from 'react-icons/pi';
 import { BsChat } from 'react-icons/bs';
-import { CiSearch } from 'react-icons/ci';
 import { FaRegMoon } from 'react-icons/fa';
 import { IoMdNotificationsOutline } from 'react-icons/io';
 import { Input } from '@heroui/react';
@@ -38,8 +37,8 @@ export const SearchIcon = (props) => {
 const Header = () => {
 	return (
 		<header className="w-full">
-			<nav className="bg-white py-4 px-4 flex items-center justify-between ">
-				<div className="flex items-center gap-5 ">
+			<nav className="bg-white h-[80px] px-4 flex items-center justify-between fixed z-50  w-full">
+				<div className="hidden md:flex items-center gap-5 ">
 					<div className="bg-[#FAFBFA] h-[45px] w-[45px]  rounded-[50%] flex items-center justify-center">
 						<MdOutlineCalendarToday className="  text-[20px]" />
 					</div>
@@ -58,7 +57,7 @@ const Header = () => {
 					/>
 				</div>
 
-				<div className="flex items-center gap-5">
+				<div className="flex items-center gap-5 absolute right-[120px]">
 					<div className="bg-[#FAFBFA] h-[45px] w-[45px]  rounded-[50%] flex items-center justify-center">
 						<FaRegMoon className="  text-[20px]" />
 					</div>

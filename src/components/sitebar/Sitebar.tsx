@@ -1,16 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FiHome, FiCalendar } from 'react-icons/fi';
-import { RiGroupFill } from "react-icons/ri";
-import {
-	Employees,
-	Groups,
-	Kub,
-	Rashods,
-	Settings,
-	Statistic,
-	Zone,
-} from '@/assets/sitebar/SitebarSvgIcons';
+import { RiGroupFill } from 'react-icons/ri';
+import { Groups, Settings, Zone } from '@/assets/sitebar/SitebarSvgIcons';
 
 const Sitebar: React.FC = () => {
 	const [isHovered, setIsHovered] = useState(false);
@@ -46,7 +38,7 @@ const Sitebar: React.FC = () => {
 			label: 'Dashboard',
 			icon: <FiHome className="text-[25px] text-[#0E1726]" />,
 			dropdown: [
-				{ to: '/stat1', label: '- Kirim' },
+				{ to: '/total_income', label: '- Kirim' },
 				{ to: '/stat2', label: '-  Chiqim' },
 				{ to: '/stat2', label: '-  Sof foyda ' },
 				{ to: '/stat2', label: '-  Statistika' },
@@ -98,10 +90,10 @@ const Sitebar: React.FC = () => {
 			}}
 		>
 			<div className="w-full py-6 pt-[40px] px-5">
-				<div className="flex flex-col justify-center items-center">
-					<h1>Logo</h1>
+				<div className="">
+					<h1 className="text-center">Logo</h1>
 				</div>
-				<div>
+				<div className="fixed top-[80px]">
 					{links.map((link) => (
 						<div key={link.label}>
 							<div

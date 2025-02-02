@@ -41,155 +41,55 @@ export const Logo: React.FC = () => {
 		</svg>
 	);
 };
-export const Employees: React.FC = () => {
-	return (
-		<svg
-			width="22"
-			height="22"
-			viewBox="0 0 22 22"
-			fill="none"
-			xmlns="http://www.w3.org/2000/svg"
-		>
-			<path
-				d="M11 9.16667C12.7719 9.16667 14.2083 7.73025 14.2083 5.95833C14.2083 4.18642 12.7719 2.75 11 2.75C9.22804 2.75 7.79163 4.18642 7.79163 5.95833C7.79163 7.73025 9.22804 9.16667 11 9.16667Z"
-				stroke="white"
-				strokeWidth="1.5"
-				strokeLinecap="round"
-				strokeLinejoin="round"
-			/>
-			<path
-				d="M5.5 3.32507C4.66881 3.90484 4.125 4.86806 4.125 5.95834C4.125 7.1254 4.74815 8.14693 5.67985 8.70834"
-				stroke="white"
-				strokeWidth="1.5"
-				strokeLinecap="round"
-				strokeLinejoin="round"
-			/>
-			<path
-				d="M16.5 3.32507C17.3312 3.90484 17.875 4.86806 17.875 5.95834C17.875 7.04858 17.3312 8.01186 16.5 8.59161"
-				stroke="white"
-				strokeWidth="1.5"
-				strokeLinecap="round"
-				strokeLinejoin="round"
-			/>
-			<path
-				d="M5.5 18.3333V19.25H16.5V18.3333C16.5 16.6249 16.5 15.7707 16.2209 15.0968C15.8488 14.1984 15.1349 13.4846 14.2365 13.1125C13.5627 12.8333 12.7084 12.8333 11 12.8333C9.29156 12.8333 8.43732 12.8333 7.76348 13.1125C6.86505 13.4846 6.15125 14.1984 5.77913 15.0968C5.5 15.7707 5.5 16.6249 5.5 18.3333Z"
-				stroke="white"
-				strokeWidth="1.5"
-				strokeLinecap="round"
-				strokeLinejoin="round"
-			/>
-			<path
-				d="M20.1666 19.25V18.7C20.1666 16.6465 20.1666 15.6197 19.767 14.8354C19.4154 14.1454 18.8545 13.5845 18.1646 13.2329"
-				stroke="white"
-				strokeWidth="1.5"
-				strokeLinecap="round"
-				strokeLinejoin="round"
-			/>
-			<path
-				d="M1.83337 19.25V18.7C1.83337 16.6465 1.83337 15.6197 2.23302 14.8354C2.58455 14.1454 3.14548 13.5845 3.83541 13.2329"
-				stroke="white"
-				strokeWidth="1.5"
-				strokeLinecap="round"
-				strokeLinejoin="round"
-			/>
-		</svg>
-	);
-};
 
-export const Statistic: React.FC = () => {
-	return (
-		<svg
-			width="23"
-			height="22"
-			viewBox="0 0 23 22"
-			fill="none"
-			xmlns="http://www.w3.org/2000/svg"
-		>
-			<path
-				d="M2.76282 2.75V19.25H19.3399"
-				stroke="white"
-				strokeWidth="1.5"
-				strokeLinecap="round"
-				strokeLinejoin="round"
-			/>
-			<path
-				d="M6.44666 13.75V15.5833"
-				stroke="white"
-				strokeWidth="1.5"
-				strokeLinecap="round"
-				strokeLinejoin="round"
-			/>
-			<path
-				d="M10.1305 10.0833V15.5833"
-				stroke="white"
-				strokeWidth="1.5"
-				strokeLinecap="round"
-				strokeLinejoin="round"
-			/>
-			<path
-				d="M13.8142 2.75V15.5833"
-				stroke="white"
-				strokeWidth="1.5"
-				strokeLinecap="round"
-				strokeLinejoin="round"
-			/>
-			<path
-				d="M17.498 6.41666V15.5833"
-				stroke="white"
-				strokeWidth="1.5"
-				strokeLinecap="round"
-				strokeLinejoin="round"
-			/>
-		</svg>
-	);
-};
-export const Rashods: React.FC = () => {
-	return (
-		<svg
-			width="24"
-			height="24"
-			viewBox="0 0 24 24"
-			fill="none"
-			xmlns="http://www.w3.org/2000/svg"
-		>
-			<path
-				d="M18 7V21"
-				stroke="white"
-				strokeWidth="2"
-				strokeLinecap="round"
-				strokeLinejoin="round"
-			/>
-			<path
-				d="M14 3L14 21"
-				stroke="white"
-				strokeWidth="2"
-				strokeLinecap="round"
-				strokeLinejoin="round"
-			/>
-			<path
-				d="M22 3V21"
-				stroke="white"
-				strokeWidth="2"
-				strokeLinecap="round"
-				strokeLinejoin="round"
-			/>
-			<path
-				d="M10 7V21"
-				stroke="white"
-				strokeWidth="2"
-				strokeLinecap="round"
-				strokeLinejoin="round"
-			/>
-			<path
-				d="M6 3L6 21"
-				stroke="white"
-				strokeWidth="2"
-				strokeLinecap="round"
-				strokeLinejoin="round"
-			/>
-		</svg>
-	);
-};
+// export const Statistic: React.FC = () => {
+// 	return (
+// 		<svg
+// 			width="23"
+// 			height="22"
+// 			viewBox="0 0 23 22"
+// 			fill="none"
+// 			xmlns="http://www.w3.org/2000/svg"
+// 		>
+// 			<path
+// 				d="M2.76282 2.75V19.25H19.3399"
+// 				stroke="white"
+// 				strokeWidth="1.5"
+// 				strokeLinecap="round"
+// 				strokeLinejoin="round"
+// 			/>
+// 			<path
+// 				d="M6.44666 13.75V15.5833"
+// 				stroke="white"
+// 				strokeWidth="1.5"
+// 				strokeLinecap="round"
+// 				strokeLinejoin="round"
+// 			/>
+// 			<path
+// 				d="M10.1305 10.0833V15.5833"
+// 				stroke="white"
+// 				strokeWidth="1.5"
+// 				strokeLinecap="round"
+// 				strokeLinejoin="round"
+// 			/>
+// 			<path
+// 				d="M13.8142 2.75V15.5833"
+// 				stroke="white"
+// 				strokeWidth="1.5"
+// 				strokeLinecap="round"
+// 				strokeLinejoin="round"
+// 			/>
+// 			<path
+// 				d="M17.498 6.41666V15.5833"
+// 				stroke="white"
+// 				strokeWidth="1.5"
+// 				strokeLinecap="round"
+// 				strokeLinejoin="round"
+// 			/>
+// 		</svg>
+// 	);
+// };
+
 export const Money: React.FC<propsColor> = ({ color }) => {
 	return (
 		<svg
@@ -270,39 +170,7 @@ export const Groups: React.FC = () => {
 		</svg>
 	);
 };
-export const Kub: React.FC = () => {
-	return (
-		<svg
-			width="22"
-			height="22"
-			viewBox="0 0 22 22"
-			fill="none"
-			xmlns="http://www.w3.org/2000/svg"
-		>
-			<path
-				d="M19.25 14.6667V7.33333C19.2497 7.01183 19.1648 6.69608 19.0039 6.41773C18.843 6.13939 18.6118 5.90825 18.3333 5.7475L11.9167 2.08083C11.638 1.91992 11.3218 1.83521 11 1.83521C10.6782 1.83521 10.362 1.91992 10.0833 2.08083L3.66667 5.7475C3.38824 5.90825 3.15698 6.13939 2.99609 6.41773C2.8352 6.69608 2.75033 7.01183 2.75 7.33333V14.6667C2.75033 14.9882 2.8352 15.3039 2.99609 15.5823C3.15698 15.8606 3.38824 16.0918 3.66667 16.2525L10.0833 19.9192C10.362 20.0801 10.6782 20.1648 11 20.1648C11.3218 20.1648 11.638 20.0801 11.9167 19.9192L18.3333 16.2525C18.6118 16.0918 18.843 15.8606 19.0039 15.5823C19.1648 15.3039 19.2497 14.9882 19.25 14.6667Z"
-				stroke="white"
-				strokeWidth="2"
-				strokeLinecap="round"
-				strokeLinejoin="round"
-			/>
-			<path
-				d="M2.99756 6.38L11.0001 11.0092L19.0026 6.38"
-				stroke="white"
-				strokeWidth="2"
-				strokeLinecap="round"
-				strokeLinejoin="round"
-			/>
-			<path
-				d="M11 20.24V11"
-				stroke="white"
-				strokeWidth="2"
-				strokeLinecap="round"
-				strokeLinejoin="round"
-			/>
-		</svg>
-	);
-};
+
 export const Zone: React.FC = () => {
 	return (
 		<svg
