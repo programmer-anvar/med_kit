@@ -3,11 +3,10 @@
 .custom-search-input .ant-input-focused,
 .custom-search-input .ant-input-affix-wrapper:focus,
 .custom-search-input .ant-input-affix-wrapper-focused {
-    border-color: red !important; /* Change 'red' to any color you prefer */
-    box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.2) !important; /* Optional: changes the glow effect color */
+    border-color: red !important; 
+    box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.2) 
 }
 
-/* Optional: Change border color on hover */
 .custom-search-input .ant-input-affix-wrapper:hover {
-    border-color: green !important; /* Change 'green' to any color you prefer */
+    border-color: green !important; 
 }

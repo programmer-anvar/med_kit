@@ -1,4 +1,3 @@
-import React from 'react';
 import { MdOutlineCalendarToday } from 'react-icons/md';
 import { PiNotePencil } from 'react-icons/pi';
 import { BsChat } from 'react-icons/bs';

@@ -38,10 +38,10 @@ const Sitebar: React.FC = () => {
 			label: 'Dashboard',
 			icon: <FiHome className="text-[25px] text-[#0E1726]" />,
 			dropdown: [
-				{ to: '/total_income', label: '- Kirim' },
-				{ to: '/stat2', label: '-  Chiqim' },
-				{ to: '/stat2', label: '-  Sof foyda ' },
-				{ to: '/stat2', label: '-  Statistika' },
+				{ to: '/total_income1', label: '- Kirim' },
+				{ to: '/total_cost', label: '-  Chiqim' },
+				{ to: '/sof_foyda', label: '-  Sof foyda ' },
+				{ to: '/statistika', label: '-  Statistika' },
 			],
 		},
 		{
@@ -124,7 +124,7 @@ const Sitebar: React.FC = () => {
 								</div>
 							</div>
 							{openDropdown === link.label && link.dropdown && (
-								<div className="bg-[#fff] p-2 rounded-[5px] transition-all duration-500">
+								<div className="bg-[#fff] p-2 rounded-[5px] transition-all duration-500 cursor-pointer">
 									{link.dropdown.map((sub) => (
 										<div
 											key={sub.label}

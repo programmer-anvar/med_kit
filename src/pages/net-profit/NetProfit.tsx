@@ -1,28 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ReactApexChart from 'react-apexcharts'; // Ensure this is imported
-import TotalProfit from './TotalProfit';
 import { Card } from 'antd';
-import ComporativeAdvantage from './ComporativeAdvantage';
-import BenifitPation from './BenifitPation';
+import TotalProfit from '../totalIncome1/TotalProfit';
+import BenifitPation from '../totalIncome1/BenifitPation';
 
-const monthDataSeries1 = [
-	{ price: 1, dates: 2 },
-	{ price: 1, dates: 2 },
-	{ price: 1, dates: 2 },
-	{ price: 5, dates: 2 },
-	{ price: 3, dates: 2 },
-	{ price: 1, dates: 2 },
-	{ price: 1, dates: 2 },
-];
-
-// Prepare the data for the chart
-const prices = monthDataSeries1.map((item) => item.price);
-const dates = monthDataSeries1.map((item, index) =>
-	new Date(2020, 0, index + 1).getTime()
-); // Assuming one date per entry for example
-
-const TotalIncome = () => {
-	const [state, setState] = React.useState({
+const NetProfit = () => {
+	const [state] = useState({
 		series: [
 			{
 				name: 'Desktops',
@@ -89,7 +72,7 @@ const TotalIncome = () => {
 					<TotalProfit />
 				</div>
 			</div>
-			<ComporativeAdvantage />
+			{/* <ComporativeAdvantage /> */}
 			<BenifitPation />
 
 			<div></div>
@@ -97,4 +80,4 @@ const TotalIncome = () => {
 	);
 };
 
-export default TotalIncome;
+export default NetProfit;

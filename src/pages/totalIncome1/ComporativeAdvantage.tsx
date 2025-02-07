@@ -2,7 +2,7 @@ import { useState } from 'react';
 import ReactApexChart from 'react-apexcharts';
 
 const ComporativeAdvantage = () => {
-	const [state, setState] = useState({
+	const [state] = useState({
 		series: [
 			{
 				name: 'Net Profit',
@@ -83,6 +83,5 @@ const ComporativeAdvantage = () => {
 		</div>
 	);
 };
-
 
 export default ComporativeAdvantage;

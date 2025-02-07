@@ -1,8 +1,8 @@
-import { useState } from "react";
-import ReactApexChart from "react-apexcharts";
+import { useState } from 'react';
+import ReactApexChart from 'react-apexcharts';
 
 const TotalProfit = () => {
-	const [state, setState] = useState({
+	const [state] = useState({
 		series: [44, 55, 13, 43, 22],
 		options: {
 			chart: {
@@ -41,4 +41,4 @@ const TotalProfit = () => {
 	);
 };
 
-export default TotalProfit
+export default TotalProfit;

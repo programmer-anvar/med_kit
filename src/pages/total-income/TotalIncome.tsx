@@ -1,6 +1,7 @@
 import ReactApexChart from 'react-apexcharts';
 import { Select, SelectItem } from '@heroui/react';
 import { SelectorIcon } from '@/assets/login/SvgIcons';
+import TotalCostUsserTable from './TotalCostUserTAble';
 
 interface RevenueChart {
 	series: {
@@ -17,13 +18,6 @@ const revenueChart: RevenueChart = {
 			data: [
 				16800, 16800, 15500, 17800, 15500, 17000, 19000, 16000, 15000, 17000,
 				14000, 17000,
-			],
-		},
-		{
-			name: 'Expenses',
-			data: [
-				16500, 17500, 16200, 17300, 16000, 19500, 16000, 17000, 16000, 19000,
-				18000, 19000,
 			],
 		},
 	],
@@ -175,10 +169,10 @@ export const animals = [
 	{ key: 'crocodile', label: 'Crocodile' },
 ];
 
-const Revenue: React.FC = () => {
+const TotalIncome: React.FC = () => {
 	return (
 		<div className="">
-			<div className="max-h-[calc(100vh-200px)] overflow-y-scroll mt-6">
+			<div className="h-full  mt-6">
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-4 ">
 					<div className="md:col-span-2 bg-white p-5 rounded-md shadow">
 						<div className="flex justify-between">
@@ -252,9 +246,11 @@ const Revenue: React.FC = () => {
 						</div>
 					</div>
 				</div>
+
+				<TotalCostUsserTable />
 			</div>
 		</div>
 	);
 };
 
-export default Revenue;
+export default TotalIncome;

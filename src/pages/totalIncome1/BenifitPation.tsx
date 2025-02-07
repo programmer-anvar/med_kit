@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useMemo } from 'react';
+import { useCallback, useState, useMemo } from 'react';
 import {
 	Table,
 	TableHeader,
@@ -16,7 +16,7 @@ import {
 	User,
 	Pagination,
 } from '@heroui/react';
-import { SiGooglesheets } from "react-icons/si";
+import { SiGooglesheets } from 'react-icons/si';
 
 export const columns = [
 	{ name: 'Invoice', uid: 'invoice', sortable: true },
@@ -28,7 +28,7 @@ export const columns = [
 	{ name: 'ROLE', uid: 'role', sortable: true },
 	{ name: 'TEAM', uid: 'team' },
 	{ name: 'Xolat', uid: 'Tolangan', sortable: true },
-	{ name: 'Kassalik varaqasiga otish', uid: <SiGooglesheets/> },
+	{ name: 'Kassalik varaqasiga otish', uid: <SiGooglesheets /> },
 	{ name: 'ACTIONS', uid: 'actions' },
 ];
 
@@ -43,8 +43,8 @@ export const users = [
 		id: 1,
 		invoice: '#225223',
 		name: 'Tony Reichert',
-        muolaja:'Implant',
-        tologan:'To`langan ',
+		muolaja: 'Implant',
+		tologan: 'To`langan ',
 		role: 'CEO',
 		team: 'Management',
 		status: 'active',
@@ -56,8 +56,8 @@ export const users = [
 		id: 1,
 		invoice: '#225223',
 		name: 'Tony Reichert',
-        muolaja:'Implant',
-        tologan:'To`langan ',
+		muolaja: 'Implant',
+		tologan: 'To`langan ',
 		role: 'CEO',
 		team: 'Management',
 		status: 'active',
@@ -69,8 +69,8 @@ export const users = [
 		id: 1,
 		invoice: '#225223',
 		name: 'Tony Reichert',
-        muolaja:'Implant',
-        tologan:'To`langan ',
+		muolaja: 'Implant',
+		tologan: 'To`langan ',
 		role: 'CEO',
 		team: 'Management',
 		status: 'active',
@@ -82,8 +82,8 @@ export const users = [
 		id: 1,
 		invoice: '#225223',
 		name: 'Tony Reichert',
-        muolaja:'Implant',
-        tologan:'To`langan ',
+		muolaja: 'Implant',
+		tologan: 'To`langan ',
 		role: 'CEO',
 		team: 'Management',
 		status: 'active',
@@ -95,8 +95,8 @@ export const users = [
 		id: 1,
 		invoice: '#225223',
 		name: 'Tony Reichert',
-        muolaja:'Implant',
-        tologan:'To`langan ',
+		muolaja: 'Implant',
+		tologan: 'To`langan ',
 		role: 'CEO',
 		team: 'Management',
 		status: 'active',
@@ -108,8 +108,8 @@ export const users = [
 		id: 1,
 		invoice: '#225223',
 		name: 'Tony Reichert',
-        muolaja:'Implant',
-        tologan:'To`langan ',
+		muolaja: 'Implant',
+		tologan: 'To`langan ',
 		role: 'CEO',
 		team: 'Management',
 		status: 'active',
@@ -121,8 +121,8 @@ export const users = [
 		id: 1,
 		invoice: '#225223',
 		name: 'Tony Reichert',
-        muolaja:'Implant',
-        tologan:'To`langan ',
+		muolaja: 'Implant',
+		tologan: 'To`langan ',
 		role: 'CEO',
 		team: 'Management',
 		status: 'active',
@@ -134,8 +134,8 @@ export const users = [
 		id: 1,
 		invoice: '#225223',
 		name: 'Tony Reichert',
-        muolaja:'Implant',
-        tologan:'To`langan ',
+		muolaja: 'Implant',
+		tologan: 'To`langan ',
 		role: 'CEO',
 		team: 'Management',
 		status: 'active',
@@ -147,8 +147,8 @@ export const users = [
 		id: 1,
 		invoice: '#225223',
 		name: 'Tony Reichert',
-        muolaja:'Implant',
-        tologan:'To`langan ',
+		muolaja: 'Implant',
+		tologan: 'To`langan ',
 		role: 'CEO',
 		team: 'Management',
 		status: 'active',
@@ -160,8 +160,8 @@ export const users = [
 		id: 1,
 		invoice: '#225223',
 		name: 'Tony Reichert',
-        muolaja:'Implant',
-        tologan:'To`langan ',
+		muolaja: 'Implant',
+		tologan: 'To`langan ',
 		role: 'CEO',
 		team: 'Management',
 		status: 'active',
@@ -173,8 +173,8 @@ export const users = [
 		id: 1,
 		invoice: '#225223',
 		name: 'Tony Reichert',
-        muolaja:'Implant',
-        tologan:'To`langan ',
+		muolaja: 'Implant',
+		tologan: 'To`langan ',
 		role: 'CEO',
 		team: 'Management',
 		status: 'active',
@@ -186,8 +186,8 @@ export const users = [
 		id: 1,
 		invoice: '#225223',
 		name: 'Tony Reichert',
-        muolaja:'Implant',
-        tologan:'To`langan ',
+		muolaja: 'Implant',
+		tologan: 'To`langan ',
 		role: 'CEO',
 		team: 'Management',
 		status: 'active',
@@ -199,8 +199,8 @@ export const users = [
 		id: 1,
 		invoice: '#225223',
 		name: 'Tony Reichert',
-        muolaja:'Implant',
-        tologan:'To`langan ',
+		muolaja: 'Implant',
+		tologan: 'To`langan ',
 		role: 'CEO',
 		team: 'Management',
 		status: 'active',
@@ -212,8 +212,8 @@ export const users = [
 		id: 1,
 		invoice: '#225223',
 		name: 'Tony Reichert',
-        muolaja:'Implant',
-        tologan:'To`langan ',
+		muolaja: 'Implant',
+		tologan: 'To`langan ',
 		role: 'CEO',
 		team: 'Management',
 		status: 'active',
@@ -225,8 +225,8 @@ export const users = [
 		id: 1,
 		invoice: '#225223',
 		name: 'Tony Reichert',
-        muolaja:'Implant',
-        tologan:'To`langan ',
+		muolaja: 'Implant',
+		tologan: 'To`langan ',
 		role: 'CEO',
 		team: 'Management',
 		status: 'active',
@@ -238,8 +238,8 @@ export const users = [
 		id: 1,
 		invoice: '#225223',
 		name: 'Tony Reichert',
-        muolaja:'Implant',
-        tologan:'To`langan ',
+		muolaja: 'Implant',
+		tologan: 'To`langan ',
 		role: 'CEO',
 		team: 'Management',
 		status: 'active',
@@ -251,8 +251,8 @@ export const users = [
 		id: 1,
 		invoice: '#225223',
 		name: 'Tony Reichert',
-        muolaja:'Implant',
-        tologan:'To`langan ',
+		muolaja: 'Implant',
+		tologan: 'To`langan ',
 		role: 'CEO',
 		team: 'Management',
 		status: 'active',
@@ -264,8 +264,8 @@ export const users = [
 		id: 1,
 		invoice: '#225223',
 		name: 'Tony Reichert',
-        muolaja:'Implant',
-        tologan:'To`langan ',
+		muolaja: 'Implant',
+		tologan: 'To`langan ',
 		role: 'CEO',
 		team: 'Management',
 		status: 'active',
@@ -273,15 +273,11 @@ export const users = [
 		avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026024d',
 		email: 'tony.reichert@example.com',
 	},
-	
-	
 ];
 
 export function capitalize(s) {
 	return s ? s.charAt(0).toUpperCase() + s.slice(1).toLowerCase() : '';
 }
-
-
 
 export const VerticalDotsIcon = ({ size = 24, width, height, ...props }) => {
 	return (
@@ -340,9 +336,9 @@ const statusColorMap = {
 };
 
 const INITIAL_VISIBLE_COLUMNS = [
-    'muolaja',
+	'muolaja',
 	'invoice',
-    'tologan',
+	'tologan',
 	'name',
 	'role',
 	'status',
@@ -352,18 +348,14 @@ const INITIAL_VISIBLE_COLUMNS = [
 export default function BenifitPation() {
 	const [filterValue, setFilterValue] = useState('');
 	const [selectedKeys, setSelectedKeys] = useState(new Set([]));
-	const [visibleColumns, setVisibleColumns] = useState(
-		new Set(INITIAL_VISIBLE_COLUMNS)
-	);
-	const [statusFilter, setStatusFilter] = useState('all');
+	const [visibleColumns] = useState(new Set(INITIAL_VISIBLE_COLUMNS));
+	const [statusFilter] = useState('all');
 	const [rowsPerPage, setRowsPerPage] = useState(5);
 	const [sortDescriptor, setSortDescriptor] = useState({
 		column: 'age',
 		direction: 'ascending',
 	});
 	const [page, setPage] = useState(1);
-
-	const hasSearchFilter = Boolean(filterValue);
 
 	const headerColumns = useMemo(() => {
 		if (visibleColumns === 'all') return columns;
@@ -376,11 +368,6 @@ export default function BenifitPation() {
 	const filteredItems = useMemo(() => {
 		let filteredUsers = [...users];
 
-		if (hasSearchFilter) {
-			filteredUsers = filteredUsers.filter((user) =>
-				user.name.toLowerCase().includes(filterValue.toLowerCase())
-			);
-		}
 		if (
 			statusFilter !== 'all' &&
 			Array.from(statusFilter).length !== statusOptions.length
@@ -474,7 +461,7 @@ export default function BenifitPation() {
 		}
 	}, [page, pages]);
 
-	const onPreviousPage =useCallback(() => {
+	const onPreviousPage = useCallback(() => {
 		if (page > 1) {
 			setPage(page - 1);
 		}
@@ -494,11 +481,6 @@ export default function BenifitPation() {
 		}
 	}, []);
 
-	const onClear = useCallback(() => {
-		setFilterValue('');
-		setPage(1);
-	}, []);
-
 	const topContent = useMemo(() => {
 		return (
 			<div className="flex flex-col gap-4">
@@ -510,7 +492,6 @@ export default function BenifitPation() {
 						placeholder="Search by name..."
 						startContent={<SearchIcon />}
 						value={filterValue}
-						onClear={() => onClear()}
 						onValueChange={onSearchChange}
 					/>
 				</div>
@@ -539,7 +520,6 @@ export default function BenifitPation() {
 		onRowsPerPageChange,
 		users.length,
 		onSearchChange,
-		hasSearchFilter,
 	]);
 
 	const bottomContent = useMemo(() => {
@@ -579,7 +559,7 @@ export default function BenifitPation() {
 				</div>
 			</div>
 		);
-	}, [selectedKeys, items.length, page, pages, hasSearchFilter]);
+	}, [selectedKeys, items.length, page, pages]);
 
 	return (
 		<Table
