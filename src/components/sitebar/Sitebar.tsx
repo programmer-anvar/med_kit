@@ -129,7 +129,7 @@ const Sitebar: React.FC = () => {
 										<div
 											key={sub.label}
 											onClick={() => handleLinkClick(sub.to, sub.label)}
-											className="p-1 hover:bg-[#00E396] hover:text-white rounded-[3px]"
+											className="p-1 hover:bg-[#00E396] hover:text-white rounded-[3px] transition-all"
 										>
 											{sub.label}
 										</div>
