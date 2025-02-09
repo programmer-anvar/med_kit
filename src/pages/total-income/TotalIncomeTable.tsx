@@ -145,7 +145,7 @@ const TotalIncomeTable: React.FC = () => {
 	const [statusFilter] = useState<string>('all');
 	const [rowsPerPage, setRowsPerPage] = useState<number>(5);
 	const [sortDescriptor, setSortDescriptor] = useState<SortDescriptor>({
-		column: 'age',
+		column: 'id', // Changed from 'age' to 'id', assuming 'id' is a valid sortable field
 		direction: 'ascending',
 	});
 	const [page, setPage] = useState<number>(1);
