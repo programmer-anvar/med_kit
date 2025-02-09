@@ -22,12 +22,13 @@ type Column = {
 // Define the type for a user
 type User = {
 	id: number;
-	name: string;
 	muolaja: string;
 	xolat: string;
 	pay: string;
 	avatar: string;
 	email: string;
+	invoice: string;
+	kassalikVaraq: unknown;
 };
 
 // Define the type for sorting descriptor
@@ -77,7 +78,7 @@ export const users: User[] = [
 		email: 'tony.reichert@example.com',
 	},
 	{
-		id: 1,
+		id: 2,
 		muolaja: '1)implant',
 		invoice: '#081451',
 		pay: 'Tolangan',
