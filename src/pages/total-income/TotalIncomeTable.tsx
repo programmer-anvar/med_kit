@@ -12,6 +12,7 @@ import {
 	User,
 	Pagination,
 } from '@heroui/react';
+import { IoNewspaperSharp } from 'react-icons/io5';
 type Column = {
 	name: string;
 	uid: string;
@@ -22,10 +23,9 @@ type Column = {
 type User = {
 	id: number;
 	name: string;
-	role: string;
-	team: string;
-	status: string;
-	age: string;
+	muolaja: string;
+	xolat: string;
+	pay: string;
 	avatar: string;
 	email: string;
 };
@@ -52,13 +52,15 @@ export const statusOptions = [
 ];
 
 export const columns: Column[] = [
-	{ name: 'ID', uid: 'id', sortable: true },
-	{ name: 'NAME', uid: 'name', sortable: true },
-	{ name: 'AGE', uid: 'age', sortable: true },
-	{ name: 'ROLE', uid: 'role', sortable: true },
+	{ name: 'Invoice', uid: 'invoice', sortable: true },
+	{ name: 'F.I.SH', uid: 'name', sortable: true },
+	{ name: 'Muolaja', uid: 'muolaja', sortable: true },
+	{ name: "To'langan", uid: 'pay', sortable: true },
+	{ name: 'Xolat', uid: 'xolat', sortable: true },
+	{ name: 'kassalikVaraq', uid: 'kassalikVaraq', sortable: true },
 	{
-		name: 'TEAM',
-		uid: 'team',
+		name: 'Actions',
+		uid: 'actions',
 		sortable: false,
 	},
 ];
@@ -66,11 +68,22 @@ export const columns: Column[] = [
 export const users: User[] = [
 	{
 		id: 1,
+		muolaja: '1)implant',
+		invoice: '#081451',
+		pay: 'tolangan',
+		xolat: 'tolangan',
+		kassalikVaraq: <IoNewspaperSharp className="text-[22px] text-center" />,
+		avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026024d',
+		email: 'tony.reichert@example.com',
+	},
+	{
+		id: 1,
+		muolaja: '1)implant',
+		invoice: '#081451',
+		pay: 'Tolangan',
+		xolat: 'Qarzdor',
+		kassalikVaraq: <IoNewspaperSharp className="text-[22px] text-center" />,
 		name: 'Tony Reichert',
-		role: 'CEO',
-		team: 'Management',
-		status: 'active',
-		age: '29',
 		avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026024d',
 		email: 'tony.reichert@example.com',
 	},
@@ -111,16 +124,17 @@ export const SearchIcon = ({ ...props }: IconProps) => {
 };
 
 const statusColorMap = {
-	active: 'success',
-	paused: 'danger',
+	tolangan: 'success',
+	Qarzdor: 'danger',
 	vacation: 'warning',
 };
 
 const INITIAL_VISIBLE_COLUMNS: Set<string> = new Set([
 	'name',
-	'role',
-	'status',
-	'actions',
+	'muolaja',
+	'pay',
+	'xolat',
+	'kassalikVaraq',
 ]);
 
 const TotalIncomeTable: React.FC = () => {
@@ -207,11 +221,11 @@ const TotalIncomeTable: React.FC = () => {
 						</p>
 					</div>
 				);
-			case 'status':
+			case 'xolat':
 				return (
 					<Chip
 						className="capitalize"
-						color={statusColorMap[user.status]}
+						color={statusColorMap[user.xolat]}
 						size="sm"
 						variant="flat"
 					>
@@ -256,7 +270,7 @@ const TotalIncomeTable: React.FC = () => {
 
 	const topContent = useMemo(() => {
 		return (
-			<div className="flex flex-col gap-4">
+			<div className="flex flex-col gap-4 mt-28">
 				<div className="flex justify-between gap-3 items-end">
 					<Input
 						isClearable
