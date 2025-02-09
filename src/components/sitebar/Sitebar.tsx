@@ -38,7 +38,7 @@ const Sitebar: React.FC = () => {
 			label: 'Dashboard',
 			icon: <FiHome className="text-[25px] text-[#0E1726]" />,
 			dropdown: [
-				{ to: '/total_income1', label: '- Kirim' },
+				{ to: '/TotalIncome', label: '- Kirim' },
 				{ to: '/total_cost', label: '-  Chiqim' },
 				{ to: '/sof_foyda', label: '-  Sof foyda ' },
 				{ to: '/statistika', label: '-  Statistika' },
