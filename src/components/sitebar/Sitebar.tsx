@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FiHome, FiCalendar } from 'react-icons/fi';
 import { RiGroupFill } from 'react-icons/ri';
-import { Groups } from '@/assets/sitebar/SitebarSvgIcons';
-import { SiMaildotru } from 'react-icons/si';
-import { FaDollarSign, FaLock } from 'react-icons/fa';
 import { MdLaptopMac } from 'react-icons/md';
 
 const Sitebar: React.FC = () => {
@@ -57,32 +54,32 @@ const Sitebar: React.FC = () => {
 			label: 'Bemorlar',
 			icon: <RiGroupFill className="text-[35px] text-[#0E1726] font-bold" />,
 		},
-		{
-			to: '/',
-			label: 'Mailbox',
-			icon: <SiMaildotru className="text-[35px] text-[#0E1726] font-bold" />,
-		},
-		{
-			to: '/',
-			label: 'Invoice',
-			icon: <FaDollarSign className="text-[30px] text-[#0E1726] font-bold" />,
-		},
+		// {
+		// 	to: '/',
+		// 	label: 'Mailbox',
+		// 	icon: <SiMaildotru className="text-[35px] text-[#0E1726] font-bold" />,
+		// },
+		// {
+		// 	to: '/',
+		// 	label: 'Invoice',
+		// 	icon: <FaDollarSign className="text-[30px] text-[#0E1726] font-bold" />,
+		// },
 		{
 			to: '/hodimlar',
 			label: 'Xodimlar',
 			icon: <RiGroupFill className="text-[35px] text-[#0E1726] font-bold" />,
 		},
 		{
-			to: '/',
+			to: '/sales',
 			label: 'Boshqaruv paneli',
 			icon: <MdLaptopMac className="text-[35px] text-[#0E1726] font-bold" />,
 		},
-		{
-			to: '/',
-			label: 'Tasdiqlash',
-			icon: <FaLock className="text-[35px] text-[#0E1726] font-bold" />,
-		},
-		{ to: '/sotuv', label: 'Sotuv bo’limi', icon: <Groups /> },
+		// {
+		// 	to: '/',
+		// 	label: 'Tasdiqlash',
+		// 	icon: <FaLock className="text-[35px] text-[#0E1726] font-bold" />,
+		// },
+		// { to: '/sotuv', label: 'Sotuv bo’limi', icon: <Groups /> },
 	];
 
 	return (
