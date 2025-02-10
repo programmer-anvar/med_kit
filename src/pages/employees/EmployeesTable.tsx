@@ -1,7 +1,4 @@
 import React, { useMemo, useState } from 'react';
-import { SlNote } from 'react-icons/sl';
-import { FaRegStickyNote } from 'react-icons/fa';
-import { MdDelete } from 'react-icons/md';
 import {
 	Table,
 	TableHeader,
@@ -10,13 +7,14 @@ import {
 	TableRow,
 	TableCell,
 	Pagination,
+	Button,
 } from '@heroui/react';
 type User = {
 	id: number;
 	invoice: string;
 	name: string;
 	phone: string;
-	date: string;
+	job: string;
 	amount: string;
 	avatar: string;
 	email: string;
@@ -26,9 +24,9 @@ export const users: User[] = [
 	{
 		id: 1,
 		name: 'Tony Reichert',
-		invoice: '#4444',
+		invoice: 'Sub Admin',
 		phone: '+998 999 55 66',
-		date: '15 Dec 2020',
+		job: 'Doctor',
 		amount: '2275.45',
 		status: 'Paid',
 		avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026024d',
@@ -37,16 +35,60 @@ export const users: User[] = [
 	{
 		id: 2,
 		name: 'Tony Reichert',
-		invoice: '#4444',
+		invoice: 'Sub Admin',
 		phone: '+998 999 55 66',
-		date: '15 Dec 2020',
+		job: 'Doctor',
+		amount: '2275.45',
+		status: 'Paid',
+		avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026024d',
+		email: 'tony.reichert@example.com',
+	},
+	{
+		id: 3,
+		name: 'Tony Reichert',
+		invoice: 'Sub Admin',
+		phone: '+998 999 55 66',
+		job: 'Doctor',
+		amount: '2275.45',
+		status: 'Paid',
+		avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026024d',
+		email: 'tony.reichert@example.com',
+	},
+	{
+		id: 4,
+		name: 'Tony Reichert',
+		invoice: 'Sub Admin',
+		phone: '+998 999 55 66',
+		job: 'Doctor',
+		amount: '2275.45',
+		status: 'Paid',
+		avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026024d',
+		email: 'tony.reichert@example.com',
+	},
+	{
+		id: 5,
+		name: 'Tony Reichert',
+		invoice: 'Sub Admin',
+		phone: '+998 999 55 66',
+		job: 'Doctor',
+		amount: '2275.45',
+		status: 'Paid',
+		avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026024d',
+		email: 'tony.reichert@example.com',
+	},
+	{
+		id: 6,
+		name: 'Tony Reichert',
+		invoice: 'Sub Admin',
+		phone: '+998 999 55 66',
+		job: 'Doctor',
 		amount: '2275.45',
 		status: 'Paid',
 		avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026024d',
 		email: 'tony.reichert@example.com',
 	},
 ];
-const PatientTable: React.FC = () => {
+const EmployeesTable: React.FC = () => {
 	const [page, setPage] = useState<number>(1);
 	const [rowsPerPage] = useState<number>(5);
 
@@ -57,36 +99,19 @@ const PatientTable: React.FC = () => {
 		const end = start + rowsPerPage;
 		return users.slice(start, end);
 	}, [page, rowsPerPage]);
-	const getXolatStyle = (xolat: string) => {
-		if (xolat.toLowerCase() === 'paid') {
-			return {
-				color: 'red',
-			};
-		} else if (xolat.toLowerCase() === 'pending') {
-			return { color: 'green' };
-		} else {
-			return {};
-		}
-	};
-
 	return (
-		<div className="mt-24">
+		<div className="mt-[31px]">
 			<Table isHeaderSticky aria-label="Simple table with pagination">
 				<TableHeader>
-					<TableColumn>Invoice</TableColumn>
 					<TableColumn>Name</TableColumn>
+					<TableColumn>Holati</TableColumn>
+					<TableColumn>Kasbi</TableColumn>
 					<TableColumn>Phone</TableColumn>
-					<TableColumn>Date</TableColumn>
 					<TableColumn>Amount</TableColumn>
-					<TableColumn>Status</TableColumn>
-					<TableColumn>Action</TableColumn>
 				</TableHeader>
 				<TableBody>
 					{items.map((user) => (
 						<TableRow key={user.id}>
-							<TableCell className="text-blue-700 font-bold">
-								{user.invoice}
-							</TableCell>
 							<TableCell>
 								<div style={{ display: 'flex', alignItems: 'center' }}>
 									<img
@@ -102,19 +127,16 @@ const PatientTable: React.FC = () => {
 									{user.name}
 								</div>
 							</TableCell>
+							<TableCell>{user.invoice}</TableCell>
+							<TableCell>{user.job}</TableCell>
 							<TableCell>{user.phone}</TableCell>
-							<TableCell>{user.date}</TableCell>
-							<TableCell>{user.amount}</TableCell>
-							<TableCell
-								style={getXolatStyle(user.status)}
-								className="h-[10px]"
-							>
-								{user.status}
-							</TableCell>
 							<TableCell className="flex gap-5">
-								<SlNote size={18} className="mt-2 cursor-pointer" />
-								<FaRegStickyNote size={18} className="mt-2 cursor-pointer" />
-								<MdDelete size={22} className="mt-2 cursor-pointer" />
+								<Button size="sm" color="primary" variant="bordered">
+									Edit
+								</Button>
+								<Button size="sm" color="danger" variant="bordered">
+									Delete
+								</Button>
 							</TableCell>
 						</TableRow>
 					))}
@@ -134,4 +156,4 @@ const PatientTable: React.FC = () => {
 		</div>
 	);
 };
-export default PatientTable;
+export default EmployeesTable;

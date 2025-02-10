@@ -68,8 +68,8 @@ const Sitebar: React.FC = () => {
 			icon: <FaDollarSign className="text-[30px] text-[#0E1726] font-bold" />,
 		},
 		{
-			to: '/',
-			label: 'Bemorlar',
+			to: '/hodimlar',
+			label: 'Xodimlar',
 			icon: <RiGroupFill className="text-[35px] text-[#0E1726] font-bold" />,
 		},
 		{

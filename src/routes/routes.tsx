@@ -1,4 +1,5 @@
 import Layoutss from '@/components/Layout';
+import Employees from '@/pages/employees/Employees';
 import HomePage1 from '@/pages/homa-page/HomePage-1';
 import HomePage2 from '@/pages/homa-page/HomePage-2';
 import HomePage3 from '@/pages/homa-page/HomePage-3';
@@ -72,6 +73,14 @@ export const protectedRouter = createBrowserRouter([
 		element: (
 			<Layoutss>
 				<Patients />
+			</Layoutss>
+		),
+	},
+	{
+		path: '/hodimlar',
+		element: (
+			<Layoutss>
+				<Employees />
 			</Layoutss>
 		),
 	},
