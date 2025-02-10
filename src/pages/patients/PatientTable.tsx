@@ -13,7 +13,7 @@ import {
 } from '@heroui/react';
 type User = {
 	id: number;
-	invoice: number;
+	invoice: string;
 	name: string;
 	phone: string;
 	date: string;
