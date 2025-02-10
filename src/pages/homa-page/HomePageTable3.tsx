@@ -12,38 +12,57 @@ type User = {
 	id: number;
 	name: string;
 	muolaja: string;
-	xolat: string;
 	pay: string;
 	avatar: string;
 	email: string;
 	invoice: string;
 	kassalikVaraq: string;
+	doctor: string;
+	doctorAvatar: string;
+	doktorPratsent: string;
 };
 export const users: User[] = [
 	{
 		id: 1,
 		name: 'Tony Reichert',
-		muolaja: '8 soat',
-		invoice: 'Doktor',
-		pay: '646546541655165',
-		xolat: '12.0000',
+		muolaja: '100.000',
+		invoice: '#55652',
+		doctor: 'Alen Green',
+		doctorAvatar: 'https://i.pravatar.cc/150?u=a042581f4e29026024d',
+		pay: '+ 280.000',
+		doktorPratsent: '12%',
 		avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026024d',
 		email: 'tony.reichert@example.com',
 		kassalikVaraq: '60%',
 	},
 	{
 		id: 2,
-		name: 'Jane Doe',
-		muolaja: '8 soat',
-		invoice: 'Doktor',
-		pay: '646546541655165',
-		xolat: '12.0000',
-		avatar: 'https://i.pravatar.cc/150?u=a042581f4e290267e',
-		email: 'jane.doe@example.com',
+		name: 'Tony Reichert',
+		muolaja: '100.000',
+		invoice: '#55652',
+		doctor: 'Alen Green',
+		doctorAvatar: 'https://i.pravatar.cc/150?u=a042581f4e29026024d',
+		pay: '+ 280.000',
+		doktorPratsent: '12%',
+		avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026024d',
+		email: 'tony.reichert@example.com',
+		kassalikVaraq: '60%',
+	},
+	{
+		id: 3,
+		name: 'Tony Reichert',
+		muolaja: '100.000',
+		invoice: '#55652',
+		doctor: 'Alen Green',
+		doctorAvatar: 'https://i.pravatar.cc/150?u=a042581f4e29026024d',
+		pay: '+ 280.000',
+		doktorPratsent: '12%',
+		avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026024d',
+		email: 'tony.reichert@example.com',
 		kassalikVaraq: '60%',
 	},
 ];
-const TotalCostTabke1: React.FC = () => {
+const HomePageTable3: React.FC = () => {
 	const [page, setPage] = useState<number>(1);
 	const [rowsPerPage] = useState<number>(5);
 
@@ -54,36 +73,25 @@ const TotalCostTabke1: React.FC = () => {
 		const end = start + rowsPerPage;
 		return users.slice(start, end);
 	}, [page, rowsPerPage]);
-	const getXolatStyle = (xolat: string) => {
-		if (xolat.toLowerCase() === 'qarzdor') {
-			return {
-				// borderColor: 'red',
-				// borderStyle: 'solid',
-				// borderWidth: '2px',
-				// height: '10px',
-				color: 'red',
-			};
-		} else if (xolat.toLowerCase() === 'tolangan') {
-			return { color: 'green' };
-		} else {
-			return {};
-		}
-	};
 
 	return (
-		<div>
+		<div className="mt-14">
 			<Table isHeaderSticky aria-label="Simple table with pagination">
 				<TableHeader>
-					<TableColumn>F.I.SH</TableColumn>
 					<TableColumn>Invoice</TableColumn>
-					<TableColumn>Ish vaqti</TableColumn>
-					<TableColumn>Telefon raqam</TableColumn>
-					<TableColumn>Ishchi oyligi</TableColumn>
-					<TableColumn>Bosh foiz</TableColumn>
+					<TableColumn>F.I.SH</TableColumn>
+					<TableColumn>Shifokor</TableColumn>
+					<TableColumn>Summa</TableColumn>
+					<TableColumn>Shifokor foizi</TableColumn>
+					<TableColumn>Xarajat</TableColumn>
 				</TableHeader>
 				<TableBody>
 					{items.map((user) => (
 						<TableRow key={user.id}>
+							<TableCell>
+								<p className="text-blue-400 font-bold">{user.invoice}</p>
+							</TableCell>
+
 							<TableCell>
 								<div style={{ display: 'flex', alignItems: 'center' }}>
 									<img
@@ -99,14 +107,32 @@ const TotalCostTabke1: React.FC = () => {
 									{user.name}
 								</div>
 							</TableCell>
-							<TableCell>{user.invoice}</TableCell>
+							<TableCell>
+								<div style={{ display: 'flex', alignItems: 'center' }}>
+									<img
+										src={user.doctorAvatar}
+										alt="User Avatar"
+										style={{
+											width: '40px',
+											height: '40px',
+											borderRadius: '10px',
+											marginRight: '10px',
+										}}
+									/>
+									{user.doctor}
+								</div>
+							</TableCell>
 
+							<TableCell>
+								<p className="text-green-400">{user.pay}</p>
+							</TableCell>
+							<TableCell>{user.doktorPratsent}</TableCell>
 							<TableCell>{user.muolaja}</TableCell>
-							<TableCell>{user.pay}</TableCell>
+							{/*
 							<TableCell style={getXolatStyle(user.xolat)} className="h-[10px]">
 								{user.xolat}
 							</TableCell>
-							<TableCell>{user.kassalikVaraq}</TableCell>
+							 */}
 						</TableRow>
 					))}
 				</TableBody>
@@ -125,4 +151,4 @@ const TotalCostTabke1: React.FC = () => {
 		</div>
 	);
 };
-export default TotalCostTabke1;
+export default HomePageTable3;

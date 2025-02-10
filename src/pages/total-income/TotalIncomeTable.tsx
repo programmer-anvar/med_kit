@@ -54,6 +54,22 @@ const TotalIncomeTable: React.FC = () => {
 		const end = start + rowsPerPage;
 		return users.slice(start, end);
 	}, [page, rowsPerPage]);
+	const getXolatStyle = (xolat: string) => {
+		if (xolat.toLowerCase() === 'qarzdor') {
+			return {
+				// borderColor: 'red',
+				// borderStyle: 'solid',
+				// borderWidth: '2px',
+				// height: '10px',
+				color: 'red',
+			};
+		} else if (xolat.toLowerCase() === 'tolangan') {
+			return { color: 'green' };
+		} else {
+			return {};
+		}
+	};
+
 	return (
 		<div>
 			<Table isHeaderSticky aria-label="Simple table with pagination">
@@ -86,7 +102,9 @@ const TotalIncomeTable: React.FC = () => {
 							</TableCell>
 							<TableCell>{user.muolaja}</TableCell>
 							<TableCell>{user.pay}</TableCell>
-							<TableCell>{user.xolat}</TableCell>
+							<TableCell style={getXolatStyle(user.xolat)} className="h-[10px]">
+								{user.xolat}
+							</TableCell>
 							<TableCell>{user.kassalikVaraq}</TableCell>
 						</TableRow>
 					))}

@@ -1,6 +1,7 @@
 import Layoutss from '@/components/Layout';
 import HomePage1 from '@/pages/homa-page/HomePage-1';
 import HomePage2 from '@/pages/homa-page/HomePage-2';
+import HomePage3 from '@/pages/homa-page/HomePage-3';
 import Home from '@/pages/home/Home';
 import Login from '@/pages/login/Login';
 import TotalCost from '@/pages/total-cost/TotalCost';
@@ -29,6 +30,14 @@ export const protectedRouter = createBrowserRouter([
 		element: (
 			<Layoutss>
 				<HomePage2 />
+			</Layoutss>
+		),
+	},
+	{
+		path: '/homePAge-3',
+		element: (
+			<Layoutss>
+				<HomePage3 />
 			</Layoutss>
 		),
 	},
