@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FiHome, FiCalendar } from 'react-icons/fi';
 import { RiGroupFill } from 'react-icons/ri';
-import { Groups, Settings, Zone } from '@/assets/sitebar/SitebarSvgIcons';
+import { Groups } from '@/assets/sitebar/SitebarSvgIcons';
+import { SiMaildotru } from 'react-icons/si';
+import { FaDollarSign, FaLock } from 'react-icons/fa';
+import { MdLaptopMac } from 'react-icons/md';
 
 const Sitebar: React.FC = () => {
 	const [isHovered, setIsHovered] = useState(false);
@@ -50,31 +53,34 @@ const Sitebar: React.FC = () => {
 			icon: <FiCalendar className="text-[35px] text-[#0E1726] font-bold" />,
 		},
 		{
+			to: '/bemorlar',
+			label: 'Bemorlar',
+			icon: <RiGroupFill className="text-[35px] text-[#0E1726] font-bold" />,
+		},
+		{
+			to: '/',
+			label: 'Mailbox',
+			icon: <SiMaildotru className="text-[35px] text-[#0E1726] font-bold" />,
+		},
+		{
+			to: '/',
+			label: 'Invoice',
+			icon: <FaDollarSign className="text-[30px] text-[#0E1726] font-bold" />,
+		},
+		{
 			to: '/',
 			label: 'Bemorlar',
 			icon: <RiGroupFill className="text-[35px] text-[#0E1726] font-bold" />,
-			dropdown: [
-				{ to: '/prod1', label: 'Production Submenu 1' },
-				{ to: '/prod2', label: 'Production Submenu 2' },
-			],
 		},
 		{
-			to: '/ombor',
-			label: 'Ombor',
-			icon: <Zone />,
-			dropdown: [
-				{ to: '/', label: 'Storage 1' },
-				{ to: '/', label: 'Storage 2' },
-			],
+			to: '/',
+			label: 'Boshqaruv paneli',
+			icon: <MdLaptopMac className="text-[35px] text-[#0E1726] font-bold" />,
 		},
 		{
-			to: '/sozlamalar',
-			label: 'Sozlamalar',
-			icon: <Settings />,
-			dropdown: [
-				{ to: '/sett1', label: 'Settings Submenu 1' },
-				{ to: '/sett2', label: 'Settings Submenu 2' },
-			],
+			to: '/',
+			label: 'Tasdiqlash',
+			icon: <FaLock className="text-[35px] text-[#0E1726] font-bold" />,
 		},
 		{ to: '/sotuv', label: 'Sotuv bo’limi', icon: <Groups /> },
 	];

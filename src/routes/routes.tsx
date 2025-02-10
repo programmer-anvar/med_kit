@@ -4,6 +4,7 @@ import HomePage2 from '@/pages/homa-page/HomePage-2';
 import HomePage3 from '@/pages/homa-page/HomePage-3';
 import Home from '@/pages/home/Home';
 import Login from '@/pages/login/Login';
+import Patients from '@/pages/patients/Patients';
 import Sales from '@/pages/sales/Sales';
 import TotalCost from '@/pages/total-cost/TotalCost';
 import TotalIncome from '@/pages/total-income/TotalIncome';
@@ -63,6 +64,14 @@ export const protectedRouter = createBrowserRouter([
 		element: (
 			<Layoutss>
 				<Sales />
+			</Layoutss>
+		),
+	},
+	{
+		path: '/bemorlar',
+		element: (
+			<Layoutss>
+				<Patients />
 			</Layoutss>
 		),
 	},
