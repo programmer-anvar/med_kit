@@ -4,6 +4,7 @@ import HomePage2 from '@/pages/homa-page/HomePage-2';
 import HomePage3 from '@/pages/homa-page/HomePage-3';
 import Home from '@/pages/home/Home';
 import Login from '@/pages/login/Login';
+import Sales from '@/pages/sales/Sales';
 import TotalCost from '@/pages/total-cost/TotalCost';
 import TotalIncome from '@/pages/total-income/TotalIncome';
 import { createBrowserRouter } from 'react-router-dom';
@@ -54,6 +55,14 @@ export const protectedRouter = createBrowserRouter([
 		element: (
 			<Layoutss>
 				<TotalCost />
+			</Layoutss>
+		),
+	},
+	{
+		path: '/sales',
+		element: (
+			<Layoutss>
+				<Sales />
 			</Layoutss>
 		),
 	},
