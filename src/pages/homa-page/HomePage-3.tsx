@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactApexChart from 'react-apexcharts';
 import { Select, SelectItem } from '@heroui/react';
-import HomePageSolishtirma from './HomePage-3-solishtirma';
 import HomePageTable3 from './HomePageTable3';
 interface SalesByCategory {
 	series: number[];
@@ -280,7 +279,6 @@ const HomePage3: React.FC = () => {
 					</div>
 				</div>
 			</div>
-			<HomePageSolishtirma />
 
 			<HomePageTable3 />
 
